@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sketchpad</title>
+		<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/sketchpad.css"/>
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/html2canvas.min.js"></script>
+    <script src="js/sketchpad.js"></script>
+  </head>
+  <body>
+		<nav class="navbar navbar-inverse">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      		<a class="navbar-brand" href="index.html">Sketchpad</a>
+    		</div>
+    		<ul class="nav navbar-nav">
+      		<li class="clear"><a>Clear</a></li>
+      		<li class="dropdown"><a class="dropdown-toggle resize" data-toggle="dropdown">Resize <span class="caret"></span></a>
+        		<ul class="dropdown-menu sizes">
+          		<li id="10"><a>10x10</a></li>
+          		<li id="25"><a>25x25</a></li>
+          		<li id="40"><a>40x40</a></li>
+							<li id="50"><a>50x50</a></li>
+          		<li id="60"><a>60x60</a></li>
+          		<li id="70"><a>70x70</a></li>
+							<li id="80"><a>80x80</a></li>
+          		<li id="90"><a>90x90</a></li>
+          		<li id="100"><a>100x100</a></li>
+        		</ul>
+      		</li>
+      		<li class="dropdown"><a class="dropdown-toggle changeColor" data-toggle="dropdown">Change Color<span class="caret"></span></a>
+						<ul class="dropdown-menu colors">
+							<li id="red"><a>red</a></li>
+          		<li id="blue"><a>blue</a></li>
+          		<li id="green"><a>green</a></li>
+							<li id="black"><a>black</a></li>
+          		<li id="orange"><a>orange</a></li>
+						</ul>
+					</li>
+      		<li id="download"><a>Download</a></li>
+    		</ul>
+  		</div>
+		</nav>
+    <div id="container"></div>
+  </body>
+</html>
+

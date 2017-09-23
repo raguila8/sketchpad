@@ -1,0 +1,15 @@
+#container {
+  height:640px;
+  width:640px;
+  margin: auto;
+}
+
+.square {
+  background-color:lightgray;
+  float:left;
+}
+
+a {
+	cursor: pointer;
+}
+
