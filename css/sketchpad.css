@@ -1,7 +1,35 @@
+body {
+	background: #474e5d;
+}
+/*
+h3 {
+	color: yellow;
+	font-family: "Marck Script", cursive;
+	padding:top: 10px;
+}
+
+#wrapper {
+	position: relative;
+	left: 50%;
+	float: left;
+	overflow: none;
+}
+
+#border {
+	position: relative;
+	background-color: red;
+	width: 850px;
+	height: 700px;
+	border-radius: 10%;
+	margin: auto;	
+	bottom: 7%;
+}
+*/
 #container {
-  height:640px;
-  width:640px;
+  width: 35%;
   margin: auto;
+	position: relative;
+	border:2px solid black;
 }
 
 .square {
@@ -11,5 +39,76 @@
 
 a {
 	cursor: pointer;
+}
+
+#drawing {
+	margin-top: 50%;
+	top: -15px;	
+	margin-right: 15px;
+	background: orange;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	
+}
+
+.awesome {
+	background: #222;
+	border: none;
+}
+
+.sp-dd {
+	color: #9d9d9d;
+}
+
+.color {
+	margin-top: -2px;
+}
+
+.help-handle {
+	position: absolute;
+  top: 50%;
+  margin-top: -20px;
+	margin-left: 10px;
+  padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+  cursor: pointer;
+	display: block;
+	width: 24px;
+	height: 32px;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, .39);
+	color: #eee;
+	text-align: center;
+}
+
+.glyphicon {
+	
+}
+
+.help {
+	position: absolute;
+	top: 25%;
+	left: -25px;
+	margin-top: 20px;
+	padding: 10px;
+	padding-top: 50px;
+	width: 0;
+	height:50%;
+	z-index: 1;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;	
+	color: white;
+}
+
+.help .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
 }
 
