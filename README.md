@@ -1,6 +1,20 @@
 # Project Title
 
-One Paragraph of project description goes here
+A browser implementation of a sketchpad using javascript. Basic dynamic and interactive website with grid of squares where users can "sketch" by hovering their cursor over the squares. Clicking on the various options allow the user to change the grid size of the drawing area. The user is able to change the grid size, change the sketch color, erase, and download the sketch as an image upon completion.
+
+Buttons:
+
+* Clear
+* Resize
+* Download
+* Erase
+* Help
+* Spectrum Color Picker
+
+![Sketchpad](/images/sketchpad-ex1.png)
+
+[View Project](http://www.rodrigojaguilar.com/sketchpad/index.html)
+
 
 ## Getting Started
 
@@ -82,7 +96,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
+* This project was created as
 * Inspiration
 * etc
 
