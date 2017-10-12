@@ -1,94 +1,26 @@
 # Project Title
 
-A browser implementation of a sketchpad using javascript. Basic dynamic and interactive website with grid of squares where users can "sketch" by hovering their cursor over the squares. Clicking on the various options allow the user to change the grid size of the drawing area. The user is able to change the grid size, change the sketch color, erase, and download the sketch as an image upon completion.
+A browser implementation of a sketchpad using javascript. Basic dynamic and interactive website with grid of squares where users can "sketch" by hovering their cursor over the squares. Clicking on the various options allow the user to change the grid size of the drawing area. The user is able to change the grid size, change the sketch color, erase, and download the sketch as an image upon completion. User toggles between two modes, sketching and not sketching. By default the user is not sketching. To change mode, user must click anywhere in document. The bottom border color of the navigation bar describes which mode the user is in: green is sketching, red is not sketching.
 
 Buttons:
 
-* Clear
-* Resize
-* Download
-* Erase
-* Help
-* Spectrum Color Picker
+* Clear: Resets all the squares in grid to their default color.
+* Resize: Choose from a selection of sizes to resize grid. This will also clear the grid.
+* Download: Downloads the sketch as a png file.
+* Erase: Changes to the default background color (lightgray).
+* Help: Opens a help box.
+* Spectrum Color Picker: Choose any color. The default color is black.
 
 ![Sketchpad](/images/sketchpad-ex1.png)
 
 [View Project](http://www.rodrigojaguilar.com/sketchpad/index.html)
 
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* [jQuery](https://jquery.com/) - Javascript library
+* [Bootstrap](http://getbootstrap.com/docs/3.3/) - Used for a responsive navigation bar
+* [Spectrum](https://bgrins.github.io/spectrum/) - jQuery plugin used for colorpicker
+* [html2canvas](https://html2canvas.hertzen.com/) - Used to download sketch as a png file
 
 ## License
 
@@ -96,7 +28,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* This project was created as
-* Inspiration
-* etc
+* This project was created as part of The Odin Project curriculum.
 
