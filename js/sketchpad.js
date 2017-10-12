@@ -6,9 +6,10 @@ function main() {
   //var color = "black";
 	//setBorder();
 	setSpectrum();
-	setContainerHeight();
+	setContainerSize();
 	//setDrawingLight();
   grid();
+	helpDialog();
 	openHelp();
 	closeHelp();
   resize();
@@ -17,6 +18,7 @@ function main() {
   changeColor();
 	resetTiles();
 	downloadSketch();
+	erase();
 	/*$("#colors").spectrum({
     color: "#000",
 		change: function(color) {
@@ -43,6 +45,13 @@ function setSpectrum() {
 
 }
 
+function erase() {
+	$("#erase").click(function() {
+    $("#colors").spectrum("set", "lightgray");
+		squareColor = "lightgray";
+	});
+}
+
 /*
 function setBorder() {
 	$border = $("#border");
@@ -63,10 +72,32 @@ function setDrawingLight() {
 */
 
 
-function setContainerHeight() {
+function setContainerSize() {
 	$container = $("#container");
-	$container.width(.35 * $(window).width());
-	$container.height($container.width());
+	$nav = $('nav');
+	navHeight = $nav.height();
+	if (($(window).height() - navHeight) >= $(window).width()) {
+		$container.css({'width': 'calc(100vw - 5px)'});	
+
+		//$container.width('calc(100% - 5px)');
+		$container.height($container.width());
+	} else {
+		$container.css({'height': 'calc(100vh - ' + navHeight + 'px - 50px)'});
+		//$container.height('calc(100% - 5px)');
+		$container.width($container.height());
+	}
+
+	$(window).on('resize', function() {
+		if (($(window).height() - navHeight) >= $(window).width()) {
+			$container.css({'width': 'calc(100vw - 5px)'});	
+			//$container.width('calc(100% - 5px)');
+			$container.height($container.width());
+		} else {
+			$container.css({'height': 'calc(100vh - ' + navHeight + 'px - 50px)'});
+			//$container.height('calc(100% - 5px)');
+			$container.width($container.height());
+		}
+	});
 }
 
 // makes 16 by 16 grid
@@ -77,7 +108,9 @@ function grid(num = 16) {
   for (var i = 0; i < num; i++) {
     for (var j = 0; j < num; j++) {
       $square = $("<div class=\"square\"></div>");
-      $square.width(dim).height(dim);
+			$square.width('calc(100% / ' + num + ')').height('calc(100% / ' + num + ')');
+      //$square.width(dim).height(dim);
+			//$square.css({'width': 'calc(100% / ' + num + ')', 'padding-top': 'calc(100% / ' + num + ')'});	
       $square.appendTo("#container");
     }
   }
@@ -147,13 +180,16 @@ function downloadSketch() {
 }
 
 function registerClick() {
-	$("#container").on("click", function() {
-		$drawing = $('#drawing');
+	$("body").on("click", function() {
+		//$drawing = $('#drawing');
+		$nav = $('nav');
 		drawing = !drawing;
 		if (drawing) {
-			$drawing.css('background-color', 'green');
+			$nav.css("border-bottom", "1px solid green");
+			//$drawing.css('background-color', 'green');
 		} else {
-			$drawing.css('background-color', 'red');
+			$nav.css("border-bottom", "1px solid red");
+			//$drawing.css('background-color', 'red');
 		}
 	});
 }
@@ -173,4 +209,24 @@ function closeHelp() {
   	$('.main').css("margin-left", "0");
   	$('body').css("backgroundColor", "#474e5d");
 	});
+}
+
+function helpDialog() {
+	$( function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
 }

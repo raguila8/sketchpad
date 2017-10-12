@@ -1,6 +1,10 @@
 body {
 	background: #474e5d;
 }
+
+.navbar {
+	border-bottom: 1px solid red;
+}
 /*
 h3 {
 	color: yellow;
@@ -26,7 +30,7 @@ h3 {
 }
 */
 #container {
-  width: 35%;
+  /*width: 40%;*/
   margin: auto;
 	position: relative;
 	border:2px solid black;
@@ -43,18 +47,28 @@ a {
 
 #drawing {
 	margin-top: 50%;
-	top: -15px;	
+	margin-left: 10px;
+	/*top: -15px;	
 	margin-right: 15px;
+	margin-top: -10px;
+	margin-left: 10px;*/
 	background: orange;
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	
+}
+
+@media (max-width: 768px) {
+	#drawing {
+		margin-top: 0;
+  }
 }
 
 .awesome {
-	background: #222;
-	border: none;
+	margin-left: 15px;
+	margin-top: 8px;
+	background: #555;
+	color: #444;
 }
 
 .sp-dd {
@@ -112,3 +126,6 @@ a {
 	margin-left: 50px;
 }
 
+#dialog {
+	display: none;
+}
