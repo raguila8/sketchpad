@@ -5,32 +5,7 @@ body {
 .navbar {
 	border-bottom: 1px solid red;
 }
-/*
-h3 {
-	color: yellow;
-	font-family: "Marck Script", cursive;
-	padding:top: 10px;
-}
-
-#wrapper {
-	position: relative;
-	left: 50%;
-	float: left;
-	overflow: none;
-}
-
-#border {
-	position: relative;
-	background-color: red;
-	width: 850px;
-	height: 700px;
-	border-radius: 10%;
-	margin: auto;	
-	bottom: 7%;
-}
-*/
 #container {
-  /*width: 40%;*/
   margin: auto;
 	position: relative;
 	border:2px solid black;
@@ -48,10 +23,6 @@ a {
 #drawing {
 	margin-top: 50%;
 	margin-left: 10px;
-	/*top: -15px;	
-	margin-right: 15px;
-	margin-top: -10px;
-	margin-left: 10px;*/
 	background: orange;
 	width: 20px;
 	height: 20px;
