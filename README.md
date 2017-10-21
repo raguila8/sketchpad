@@ -1,4 +1,4 @@
-# Sketchpad
+# Project Title
 
 A browser implementation of a sketchpad using javascript. Basic dynamic and interactive website with grid of squares where users can "sketch" by hovering their cursor over the squares. Clicking on the various options allow the user to change the grid size of the drawing area. The user is able to change the grid size, change the sketch color, erase, and download the sketch as an image upon completion. User toggles between two modes, sketching and not sketching. By default the user is not sketching. To change mode, user must click anywhere in document. The bottom border color of the navigation bar describes which mode the user is in: green is sketching, red is not sketching.
 
