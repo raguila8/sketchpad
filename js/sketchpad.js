@@ -7,10 +7,10 @@ function main() {
 	var n = 16;
 	sketchpad.setSpectrum();
 	sketchpad.setContainerSize();
-  sketchpad.grid(n);
+	sketchpad.grid(n);
 	sketchpad.helpDialog();
-  sketchpad.resize();
-  sketchpad.sketch();
+	sketchpad.resize();
+	sketchpad.sketch();
 	sketchpad.drawingToggle();
 	sketchpad.resetTiles();
 	sketchpad.downloadSketch();
@@ -32,13 +32,13 @@ var sketchpad = {
 	setSpectrum: function() {
 		var self = this;
 		$("#colors").spectrum({
-    	color: "#000",
+			color: "#000",
 			change: function(color) {
-    		self.squareColor = color.toHexString();
+				self.squareColor = color.toHexString();
 				$('#container').css("border", "2px solid " + self.squareColor);
 			},
 			replacerClassName: 'awesome'
-  	});
+		});
 	},
 
 	// Sets the size of the sketch to either the window's width or height
@@ -75,43 +75,43 @@ var sketchpad = {
 	grid: function(num) {
 		$container = $("#container");
 		var dim = $container.width() / num;
-  	for (var i = 0; i < num; i++) {
-    	for (var j = 0; j < num; j++) {
-      	$square = $("<div class=\"square\"></div>");
+		for (var i = 0; i < num; i++) {
+			for (var j = 0; j < num; j++) {
+				$square = $("<div class=\"square\"></div>");
 				$square.width('calc(100% / ' + num + ')').height('calc(100% / ' + 
 											num + ')');
-      	$square.appendTo("#container");
-    	}
-  	}
+				$square.appendTo("#container");
+			}
+		}
 	},
 
 	// This uses the jQuery UI dialog widget to open a help box in an interactive 
 	// way.
 	helpDialog: function() {
 		$( function() {
-    	$( "#dialog" ).dialog({
-      	autoOpen: false,
-      	show: {
-        	effect: "blind",
-        	duration: 1000
-      	},
-      	hide: {
-        	effect: "explode",
-        	duration: 1000
-      	}
-    	});
- 
-    	$( "#opener" ).on( "click", function() {
-      	$( "#dialog" ).dialog( "open" );
-    	});
-  	} );
+			$( "#dialog" ).dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+				},
+				hide: {
+					effect: "explode",
+					duration: 1000
+				}
+			});
+
+			$( "#opener" ).on( "click", function() {
+				$( "#dialog" ).dialog( "open" );
+			});
+		} );
 	},
 
 	// Changes squareColor to default background color which is lighygray.
 	erase: function() {
 		var self = this;
 		$("#erase").click(function() {
-    	$("#colors").spectrum("set", "lightgray");
+			$("#colors").spectrum("set", "lightgray");
 			self.squareColor = "lightgray";
 		});
 	},
@@ -128,19 +128,19 @@ var sketchpad = {
 		var self = this;
 		$("div").on("mouseenter", '.square', function() {
 			if (self.drawing) {
-    		$(this).css('background-color', self.squareColor);
+				$(this).css('background-color', self.squareColor);
 			}
-  	});
+		});
 	},
 
 	// Erases everything and makes a new n x n grid
 	resize: function() {
 		var self = this;
 		$(".sizes li").click(function() {
-    	$(".square").remove();
-    	var num = parseInt($(this).attr("id"));
-    	self.grid(num);
-  	});
+			$(".square").remove();
+			var num = parseInt($(this).attr("id"));
+			self.grid(num);
+		});
 	},
 
 	// Changes between a drawing state and a not drawing state when user clicks
